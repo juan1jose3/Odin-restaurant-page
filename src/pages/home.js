@@ -15,12 +15,18 @@ function renderHome(){
     mainTileWrapper.classList.add("main-title");
     mainTileWrapper.textContent = "Hello Food";
 
+    const menuSection = document.createElement("div");
+    menuSection.textContent = "Menu";
+    menuSection.classList.add("menu-section");
+
     
     darkWrapper.appendChild(mainTileWrapper);
     bannerContainer.appendChild(darkWrapper);
-
+    
+    
     homeWrapper.appendChild(bannerContainer);
     mainContainer.appendChild(homeWrapper);
+    homeWrapper.appendChild(menuSection);
 }
 
 
