@@ -37,9 +37,27 @@ body{
     background-color: var(--main-back);
     color: var(--font-color);
     font-family: "Lato", sans-serif;
+    padding-bottom: 1rem;
 }
 
+.nav-bar{
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.button-item button{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: var(--special-gold);
+    font-size: var(--step-2);
+    transition: border-color 0.5s ease-out;
+}
+
+.button-item button:hover{
+    border-bottom-color: 2px solid var(--card-back);
+}
 
 .banner-container{
     background:url("./rest.jpg");
