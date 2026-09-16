@@ -1,6 +1,7 @@
 import "./styles.css";
 import renderHome from "./pages/home.js";
 import renderMenu from "./pages/menu.js";
+import renderAbout from "./pages/about.js";
 
 const navBar = document.querySelector(".nav-bar");
 const mainContainer = document.querySelector(".main-container");
@@ -16,6 +17,9 @@ navBar.addEventListener("click",event =>{
     }else if(button.classList.contains("home")){
         mainContainer.textContent = "";
         renderHome();
+    }else if(button.classList.contains("about")){
+        mainContainer.textContent = "";
+        renderAbout();
     }
 
 });

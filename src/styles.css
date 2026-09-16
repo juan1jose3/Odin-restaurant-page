@@ -41,22 +41,28 @@ body{
 }
 
 .nav-bar{
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     display: flex;
     justify-content: space-evenly;
 }
 
 .button-item button{
+    padding: 10px 10px 10px 10px;
     background-color: transparent;
+    border-radius: 12px;
     cursor: pointer;
     border: 2px solid transparent;
     color: var(--special-gold);
     font-size: var(--step-2);
-    transition: border-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .button-item button:hover{
-    border-bottom-color: 2px solid var(--card-back);
+    background-color: var(--card-back);
+}
+
+.button-item button:focus{
+    background-color: var(--card-back);
 }
 
 .banner-container{
@@ -104,7 +110,7 @@ body{
 }
 
 .card-image{
-    width: 70%;
+    width: 200px;
     padding-top: 1.5rem;
     border-radius: 15px;
 }
@@ -115,7 +121,7 @@ body{
     background-color: var(--card-back);
     border: 3px solid var(--special-gold);
     border-radius: 12px;
-    max-width: 25%;
+    width: 400px;
 }
 
 .card > h2{
@@ -133,5 +139,36 @@ body{
 .menu-card .text-wrapper{
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     text-align: left;
-    width: 80%;
+    min-width: 80%;
+}
+
+.menu-title-container{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: var(--step-2);
+    color: var(--special-gold);
+}
+
+.recipes-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 2.5rem;
+}
+
+.recipe-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.recipe-text-wrapper{
+    max-width: 25%;
+    text-align: left;
+}
+
+.recipe-image{
+    width: 350px;
+    border-radius: 12px;
 }
