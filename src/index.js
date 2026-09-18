@@ -10,6 +10,7 @@ renderHome();
 
 navBar.addEventListener("click",event =>{
     const button = event.target.closest("button");
+    if(!button) return;
 
     if(button.classList.contains("menu")){
         mainContainer.textContent = "";

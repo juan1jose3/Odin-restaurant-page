@@ -110,7 +110,7 @@ body{
 }
 
 .card-image{
-    width: 200px;
+    width: 220px;
     padding-top: 1.5rem;
     border-radius: 15px;
 }
@@ -121,7 +121,7 @@ body{
     background-color: var(--card-back);
     border: 3px solid var(--special-gold);
     border-radius: 12px;
-    width: 400px;
+    width: 300px;
 }
 
 .card > h2{
@@ -164,11 +164,25 @@ body{
 }
 
 .recipe-text-wrapper{
-    max-width: 25%;
+    max-width: 20%;
     text-align: left;
 }
 
+.recipe-text-wrapper h3,
+.recipe-price{
+    color: var(--special-gold);
+    padding-bottom: 1rem;
+    padding-top:1rem;
+}
+
+.recipe-price{
+    font-weight: bolder;
+}
+
+
+
 .recipe-image{
     width: 350px;
+    height: 200px;
     border-radius: 12px;
 }
