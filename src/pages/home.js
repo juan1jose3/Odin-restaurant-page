@@ -4,6 +4,29 @@ import pastaImage from "../images/pasta.jpg";
 
 
 function renderCards(menuContainer){
+
+
+    const content ={
+        0: [
+            "Beef Steak",
+            beefImage,
+
+            "Prime-cut beef charbroiled to juicy perfection, served sizzling with a rich, savory reduction."
+         ],
+
+        1:[
+            "Roasted Chicken",
+            chickenImage,
+            "Herb-marinated free-range chicken roasted golden and crisp, complemented by pan drippings."
+        ],
+
+        2:[
+            "Spaghetti",
+            pastaImage,
+            "Artisanal pasta tossed in a velvety garlic-infused sauce with fresh seasonal herbs and aged parmesan."
+        ]
+    }
+
     for(let cardItem = 0; cardItem < 3; cardItem++){
         const item = document.createElement("div");
         const itemTitle = document.createElement("h2");
@@ -23,20 +46,10 @@ function renderCards(menuContainer){
 
         item.classList.add("menu-card");
 
-        if(cardItem === 0){
-            itemTitle.textContent = "Beef Steak";
-            image.src = beefImage;
-            itemText.textContent = "Prime-cut beef charbroiled to juicy perfection, served sizzling with a rich, savory reduction."
-        }else if(cardItem === 1){
-            itemTitle.textContent = "Roasted Chicken";
-            image.src = chickenImage;
-            itemText.textContent = "Herb-marinated free-range chicken roasted golden and crisp, complemented by pan drippings.";
-        }else{
-            itemTitle.textContent = "Spaghetti";
-            image.src = pastaImage;
-            itemText.textContent = "Artisanal pasta tossed in a velvety garlic-infused sauce with fresh seasonal herbs and aged parmesan.";
-        }
-
+        itemTitle.textContent = content[cardItem][0];
+        image.src = content[cardItem][1];
+        itemText.textContent = content[cardItem][2];
+      
         menuContainer.appendChild(item);
     }
 }
@@ -64,7 +77,12 @@ function renderHome(){
     menuSection.classList.add("menu-section");
     menuSection.appendChild(menuTitle);
 
+    const descriptionWrapper = document.createElement("div");
+    descriptionWrapper.classList.add("description-wrapper");
 
+    const description = document.createElement("p");
+    description.textContent = "We only use five star quality for our menu, come and get the richness in every food we serve";
+    descriptionWrapper.appendChild(description);
 
     const menuCardContainer = document.createElement("div");
     menuCardContainer.classList.add("menu-card-container");
@@ -74,6 +92,7 @@ function renderHome(){
 
     darkWrapper.appendChild(mainTileWrapper);
     bannerContainer.appendChild(darkWrapper);
+    mainTileWrapper.appendChild(descriptionWrapper);
     
     
     homeWrapper.appendChild(bannerContainer);
